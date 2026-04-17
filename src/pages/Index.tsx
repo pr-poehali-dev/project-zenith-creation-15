@@ -445,8 +445,8 @@ export default function Index() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2024 Стильный код</span>
-          <span>Будь собой — это всегда в тренде</span>
+          <span>© 2026 Стильный код</span>
+          <span>Telegram: <a href="https://t.me/laman4ik0" style={{ color: "inherit" }}>@laman4ik0</a> — Кадырбаев Мансур</span>
         </div>
       </footer>
     </>
