@@ -225,7 +225,14 @@ export default function Index() {
               ))}
             </div>
           </div>
-          <div className="vibe-img"></div>
+          <div
+            className="vibe-img"
+            style={{
+              backgroundImage: `url(https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/d10c373e-3eb3-4d21-9146-6b5fa0174818.png)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
         </section>
 
         {/* БАЗОВЫЙ ГАРДЕРОБ */}
