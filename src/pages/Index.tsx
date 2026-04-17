@@ -16,6 +16,7 @@ export default function Index() {
       tagColor: "var(--secondary)",
       tagTextColor: "white",
       emoji: "👖",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/150aa1f6-d5c7-472a-8479-20da13ae7665.png",
       name: "Прямые синие джинсы",
       desc: "Классика, которая никогда не выходит из моды. Работает и в школе, и на прогулке.",
     },
