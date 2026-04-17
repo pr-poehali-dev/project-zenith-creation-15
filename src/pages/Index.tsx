@@ -36,6 +36,7 @@ export default function Index() {
       tagColor: "var(--primary)",
       tagTextColor: "white",
       emoji: "🕴",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/b0a191cb-2ff2-41f0-a4da-c49b6513dd7e.png",
       name: "Пиджак или джинсовка",
       desc: "Мгновенно «поднимает» любой образ. Накинул — уже не просто футболка, а look.",
     },
