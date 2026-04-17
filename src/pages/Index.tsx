@@ -1,245 +1,435 @@
 export default function Index() {
+  const wardrobeItems = [
+    {
+      id: 1,
+      tag: "База №1",
+      tagColor: "var(--primary)",
+      tagTextColor: "white",
+      emoji: "👕",
+      name: "Белая / серая футболка",
+      desc: "Универсальная основа любого образа. Подходит к джинсам, брюкам и под пиджак.",
+    },
+    {
+      id: 2,
+      tag: "База №2",
+      tagColor: "var(--secondary)",
+      tagTextColor: "white",
+      emoji: "👖",
+      name: "Прямые синие джинсы",
+      desc: "Классика, которая никогда не выходит из моды. Работает и в школе, и на прогулке.",
+    },
+    {
+      id: 3,
+      tag: "База №3",
+      tagColor: "var(--accent)",
+      tagTextColor: "var(--dark)",
+      emoji: "🧥",
+      name: "Однотонная толстовка",
+      desc: "Тепло + стиль. Надевай поверх футболки или под куртку — всегда выглядит аккуратно.",
+    },
+    {
+      id: 4,
+      tag: "База №4",
+      tagColor: "var(--primary)",
+      tagTextColor: "white",
+      emoji: "🕴",
+      name: "Пиджак или джинсовка",
+      desc: "Мгновенно «поднимает» любой образ. Накинул — уже не просто футболка, а look.",
+    },
+    {
+      id: 5,
+      tag: "База №5",
+      tagColor: "var(--secondary)",
+      tagTextColor: "white",
+      emoji: "👟",
+      name: "Белые кроссовки",
+      desc: "Самая нейтральная обувь. Идёт буквально ко всему: джинсы, брюки, платье.",
+    },
+    {
+      id: 6,
+      tag: "База №6",
+      tagColor: "var(--accent)",
+      tagTextColor: "var(--dark)",
+      emoji: "🧣",
+      name: "Лонгслив / водолазка",
+      desc: "Отличная замена футболке в холод. Можно носить отдельно или под пиджак.",
+    },
+  ];
+
+  const trickItems = [
+    {
+      phrase: "«Лимитированная коллекция»",
+      meaning: "Создаёт искусственный дефицит. На самом деле — просто маркетинг.",
+    },
+    {
+      phrase: "«Осталось 2 штуки»",
+      meaning: "Вызывает страх потери. Цель — заставить тебя купить прямо сейчас.",
+    },
+    {
+      phrase: "«Только сегодня скидка»",
+      meaning: "Давит на срочность. Проверь — скидка, скорее всего, будет и завтра.",
+    },
+  ];
+
   return (
     <>
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">VINYL*DINER</div>
+        <div className="logo">СТИЛЬНЫЙ*КОД</div>
         <nav>
-          <a href="#">Меню</a>
-          <a href="#">О нас</a>
-          <a href="#">Афиша</a>
-          <a href="#">Адреса</a>
+          <a href="#why">Зачем</a>
+          <a href="#wardrobe">Гардероб</a>
+          <a href="#shopping">Шопинг</a>
+          <a href="#style">Стиль</a>
         </nav>
-        <button className="btn-cta">Забронировать</button>
+        <button className="btn-cta">Начать</button>
       </header>
 
       <main>
+        {/* HERO */}
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              БЕЗ ПОНТОВ,
+              ТВОЙ
               <br />
-              ТОЛЬКО <span>ВКУС</span>
+              СТИЛЬ —<span>твои правила</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
-              Эстетика 70-х в современной подаче. Локальные продукты, огненные блюда и атмосфера для настоящих ценителей.
+              Как быть собой, не тратя всё на бренды. Гид по моде для тех, кто хочет выглядеть круто — без лишних денег и чужих правил.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
               <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
-                Заказать
+                Начать читать
               </button>
               <button className="btn-cta" style={{ background: "white" }}>
-                Смотреть меню
+                Базовый гардероб
               </button>
             </div>
           </div>
-          <div className="hero-img">
+          <div
+            className="hero-img"
+            style={{
+              backgroundImage: `url(https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/files/6592ce49-3a29-4347-bb0c-1e6bf809c3aa.jpg)`,
+            }}
+          >
             <div className="sticker">
-              СВЕЖАК
+              БУДЬ
               <br />
-              КАЖДЫЙ ДЕНЬ
+              СОБОЙ
             </div>
             <div className="floating-tag hidden md:block" style={{ top: "20%", left: "10%" }}>
-              #ЭСТЕТИКА
+              #СВОЙСТИЛЬ
             </div>
             <div className="floating-tag hidden md:block" style={{ bottom: "30%", right: "20%" }}>
-              ОГОНЬ
+              БЕЗ ПОНТОВ
             </div>
           </div>
         </section>
 
+        {/* MARQUEE */}
         <div className="marquee">
           <div className="marquee-content">
-            &nbsp; * БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ *
-            БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ
+            &nbsp; * МОДА — ЭТО САМОВЫРАЖЕНИЕ * НЕ ПОКУПАЙСЯ НА ТРЕНДЫ * НАЙДИ СВОЙ СТИЛЬ * 10 ВЕЩЕЙ — 15 ОБРАЗОВ * СТИЛЬ БЕЗ ЛИШНИХ ТРАТ *
+            МОДА — ЭТО САМОВЫРАЖЕНИЕ * НЕ ПОКУПАЙСЯ НА ТРЕНДЫ * НАЙДИ СВОЙ СТИЛЬ * 10 ВЕЩЕЙ — 15 ОБРАЗОВ * СТИЛЬ БЕЗ ЛИШНИХ ТРАТ
           </div>
         </div>
 
-        <section className="section-padding">
+        {/* ПОЧЕМУ ЭТО ВАЖНО */}
+        <section id="why" className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">ВЫБОР ШЕФА</h2>
-            <a
-              href="#"
-              className="text-sm md:text-base"
-              style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase" }}
-            >
-              Всё меню
-            </a>
+            <h2 className="section-title">ПОЧЕМУ ЭТО ВАЖНО?</h2>
           </div>
-
-          <div className="menu-grid">
-            {/* Item 1 */}
-            <div className="menu-card">
-              <span className="menu-tag">Хит продаж</span>
-              <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Классический бургер"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Классика</h3>
-                  <span className="price">1 400 ₽</span>
-                </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Тройной смэш из мраморной говядины, фирменный соус, маринованные огурцы на бриоши.
-                </p>
-              </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "30px" }} className="md:grid-cols-2">
+            <div
+              style={{
+                border: "var(--border)",
+                padding: "30px",
+                background: "white",
+                boxShadow: "var(--shadow)",
+              }}
+            >
+              <div style={{ fontSize: "48px", marginBottom: "16px" }}>💬</div>
+              <h3
+                style={{
+                  fontFamily: "Unbounded, sans-serif",
+                  fontSize: "20px",
+                  fontWeight: 800,
+                  marginBottom: "12px",
+                  textTransform: "uppercase",
+                }}
+              >
+                Одежда — это язык
+              </h3>
+              <p style={{ lineHeight: 1.7, color: "#444" }}>
+                Внешний вид — наш первый способ общения. Мы «рассказываем» о себе ещё до того, как начали говорить. Каждый образ — это твоё сообщение миру.
+              </p>
             </div>
-
-            {/* Item 2 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--secondary)" }}>
-                Острое
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Неоновая пицца"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Электро Пепперони</h3>
-                  <span className="price">1 800 ₽</span>
-                </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>Двойная пепперони, острый мёд, тесто на закваске.</p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--accent)", color: "var(--dark)" }}>
-                Популярное
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Диско Сауэр"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Диско Сауэр</h3>
-                  <span className="price">1 200 ₽</span>
-                </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  Джин, цветок бузины, голубой чай и съедобная золотая пыльца.
-                </p>
-              </div>
+            <div
+              style={{
+                border: "var(--border)",
+                padding: "30px",
+                background: "var(--accent)",
+                boxShadow: "var(--shadow)",
+              }}
+            >
+              <div style={{ fontSize: "48px", marginBottom: "16px" }}>💪</div>
+              <h3
+                style={{
+                  fontFamily: "Unbounded, sans-serif",
+                  fontSize: "20px",
+                  fontWeight: 800,
+                  marginBottom: "12px",
+                  textTransform: "uppercase",
+                }}
+              >
+                Уверенность изнутри
+              </h3>
+              <p style={{ lineHeight: 1.7, color: "#222" }}>
+                Когда тебе нравится, как ты выглядишь — ты чувствуешь себя лучше и смелее. Одежда влияет на настроение и поведение. Это не магия — это психология.
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="retro-vibe">
+        {/* МОДА И МОЗГ */}
+        <section className="retro-vibe" id="brain">
           <div>
-            <h2 className="vibe-title">ВАЙБ-ЧЕК ПРОЙДЕН.</h2>
+            <h2 className="vibe-title">МОДА И МОЗГ.</h2>
             <p className="vibe-text">
-              Мы не просто кормим. Мы создаём моменты. От плейлиста хип-хопа 90-х до диванов в стиле 70-х — каждый уголок
-              продуман для твоего идеального кадра. Бронь не нужна, просто приходи с настроением.
+              Ты когда-нибудь покупал вещь, потому что её носит блогер? Или потому что «осталось 2 штуки»? Это не случайность — это работа маркетологов.
+              FOMO (страх упустить) и желание быть частью группы — мощные инструменты влияния. Но теперь ты знаешь об этом.
             </p>
-            <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }}>
-              Наша история
-            </button>
+            <div style={{ marginTop: "30px" }}>
+              {trickItems.map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    border: "2px solid white",
+                    padding: "16px 20px",
+                    marginBottom: "12px",
+                    background: "rgba(255,255,255,0.07)",
+                  }}
+                >
+                  <div style={{ fontWeight: 800, fontSize: "16px", marginBottom: "6px", color: "#bff000" }}>
+                    {item.phrase}
+                  </div>
+                  <div style={{ fontSize: "14px", color: "#ccc", lineHeight: 1.6 }}>{item.meaning}</div>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="vibe-img"></div>
         </section>
 
-        <section className="section-padding">
-          <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @VINYL.DINER
+        {/* БАЗОВЫЙ ГАРДЕРОБ */}
+        <section id="wardrobe" className="section-padding">
+          <div className="section-header">
+            <h2 className="section-title">10 ВЕЩЕЙ — 15+ ОБРАЗОВ</h2>
+            <span
+              style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase", fontSize: "14px" }}
+            >
+              Твоя база
+            </span>
+          </div>
+
+          <div
+            style={{
+              border: "var(--border)",
+              padding: "24px",
+              background: "var(--accent)",
+              boxShadow: "var(--shadow)",
+              marginBottom: "40px",
+            }}
+          >
+            <p style={{ fontWeight: 700, fontSize: "16px", lineHeight: 1.7 }}>
+              Базовый гардероб — это 7–10 вещей, которые идеально сочетаются между собой. Один раз собрал — и каждый день у тебя есть образ без лишних раздумий и трат.
+            </p>
+          </div>
+
+          <div className="menu-grid">
+            {wardrobeItems.map((item) => (
+              <div key={item.id} className="menu-card">
+                <span className="menu-tag" style={{ background: item.tagColor, color: item.tagTextColor }}>
+                  {item.tag}
+                </span>
+                <div
+                  style={{
+                    height: "180px",
+                    background: "#f5f5f5",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "72px",
+                    borderBottom: "var(--border)",
+                  }}
+                >
+                  {item.emoji}
+                </div>
+                <div className="menu-card-body">
+                  <h3 style={{ marginBottom: "10px" }}>{item.name}</h3>
+                  <p style={{ fontSize: "14px", color: "#666", lineHeight: 1.6 }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* БЮДЖЕТНЫЙ ШОПИНГ */}
+        <section id="shopping" className="section-padding" style={{ background: "var(--dark)", color: "white" }}>
+          <h2
+            className="section-title"
+            style={{ marginBottom: "40px", color: "white" }}
+          >
+            ГДЕ ИСКАТЬ СТИЛЬ?
           </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "24px" }} className="md:grid-cols-3">
+            {[
+              {
+                icon: "🛍",
+                title: "Масс-маркет",
+                bg: "var(--primary)",
+                text: "Ozon, Wildberries, Lamoda — здесь ищи базовые вещи нейтральных цветов. Фильтруй по цвету и составу, выбирай хлопок и плотные ткани.",
+              },
+              {
+                icon: "♻️",
+                title: "Секонд-хенды",
+                bg: "var(--secondary)",
+                text: "Здесь можно найти уникальные и винтажные вещи за копейки. Главное — терпение и насмотренность. Лучшие находки — в хаосе.",
+              },
+              {
+                icon: "🔄",
+                title: "Своп-вечеринки",
+                bg: "var(--accent)",
+                text: "Обменяйся одеждой с друзьями! Собери компанию, принесите вещи, которые не носите — и обновите гардероб бесплатно.",
+              },
+            ].map((block, i) => (
+              <div
+                key={i}
+                style={{
+                  border: "2px solid white",
+                  padding: "28px",
+                  background: block.bg,
+                  color: block.bg === "var(--accent)" ? "var(--dark)" : "white",
+                }}
+              >
+                <div style={{ fontSize: "40px", marginBottom: "16px" }}>{block.icon}</div>
+                <h3
+                  style={{
+                    fontFamily: "Unbounded, sans-serif",
+                    fontSize: "18px",
+                    fontWeight: 800,
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {block.title}
+                </h3>
+                <p style={{ fontSize: "14px", lineHeight: 1.7 }}>{block.text}</p>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              marginTop: "32px",
+              border: "2px solid #444",
+              padding: "24px",
+              background: "#222",
+            }}
+          >
+            <div style={{ fontSize: "24px", marginBottom: "12px" }}>💡</div>
+            <p style={{ color: "#ccc", lineHeight: 1.7, fontSize: "15px" }}>
+              <strong style={{ color: "white" }}>Совет по уходу:</strong> Стирай при низкой температуре, сушите в тени, храни сложенными — и вещи прослужат в 2 раза дольше. Это прямая экономия!
+            </p>
+          </div>
+        </section>
+
+        {/* КАК НАЙТИ СВОЙ СТИЛЬ */}
+        <section id="style" className="section-padding">
+          <h2 className="section-title" style={{ marginBottom: "16px", textAlign: "center" }}>
+            НАЙДИ СВОЙ СТИЛЬ
+          </h2>
+          <p style={{ textAlign: "center", color: "#666", marginBottom: "48px", fontSize: "16px", lineHeight: 1.7, maxWidth: "600px", margin: "0 auto 48px" }}>
+            Вдохновение — не только в ленте блогеров. Смотри шире!
+          </p>
           <div className="social-grid">
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 1"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 2"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 3"
-              />
-            </div>
-            <div className="social-item">
-              <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 4"
-              />
-            </div>
+            {[
+              { icon: "🎬", label: "Герои фильмов", desc: "Стиль любимого персонажа — отличный ориентир" },
+              { icon: "🎵", label: "Музыканты", desc: "От рок-классики до современного хип-хопа" },
+              { icon: "🎨", label: "Художники", desc: "Необычный взгляд на цвет, форму и сочетания" },
+              { icon: "📌", label: "Moodboard", desc: "Собери доску вдохновения в Pinterest или на бумаге" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="social-item"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "12px",
+                  padding: "30px 20px",
+                  background: i % 2 === 0 ? "var(--dark)" : "var(--accent)",
+                  color: i % 2 === 0 ? "white" : "var(--dark)",
+                  minHeight: "200px",
+                  cursor: "default",
+                }}
+              >
+                <div style={{ fontSize: "48px" }}>{item.icon}</div>
+                <div style={{ fontFamily: "Unbounded, sans-serif", fontWeight: 800, fontSize: "14px", textTransform: "uppercase", textAlign: "center" }}>
+                  {item.label}
+                </div>
+                <div style={{ fontSize: "13px", textAlign: "center", opacity: 0.8, lineHeight: 1.5 }}>
+                  {item.desc}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
 
+      {/* FOOTER */}
       <footer>
         <div>
-          <div className="footer-logo">VINYL*DINER</div>
-          <p style={{ color: "#666", lineHeight: 1.6 }}>
-            Твоё место для еды высокого качества и лоу-фай атмосферы. С 2024, но ощущается как 1974.
+          <div className="footer-logo">СТИЛЬНЫЙ*КОД</div>
+          <p style={{ color: "#666", lineHeight: 1.6, marginBottom: "16px" }}>
+            Мода должна приносить радость, а не стресс.
+          </p>
+          <p
+            style={{
+              fontFamily: "Playfair Display, serif",
+              fontStyle: "italic",
+              fontSize: "18px",
+              color: "#333",
+              lineHeight: 1.6,
+              borderLeft: "4px solid var(--primary)",
+              paddingLeft: "16px",
+            }}
+          >
+            «Важно не что на тебе надето, а как ты себя в этом чувствуешь»
           </p>
         </div>
         <div className="footer-links">
-          <h4>Навигация</h4>
+          <h4>Разделы</h4>
           <ul>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Меню
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                О нас
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Политика
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Условия
-              </a>
-            </li>
+            <li><a href="#why" style={{ color: "inherit", textDecoration: "none" }}>Зачем это важно</a></li>
+            <li><a href="#wardrobe" style={{ color: "inherit", textDecoration: "none" }}>Базовый гардероб</a></li>
+            <li><a href="#shopping" style={{ color: "inherit", textDecoration: "none" }}>Где покупать</a></li>
+            <li><a href="#style" style={{ color: "inherit", textDecoration: "none" }}>Найти свой стиль</a></li>
           </ul>
         </div>
-        <div className="footer-links">
-          <h4>Часы работы</h4>
-          <ul>
-            <li>Вт-Чт: 12:00 - 23:00</li>
-            <li>Пт-Сб: 12:00 - 02:00</li>
-            <li>Вс: 11:00 - 21:00</li>
-            <li>Пн: Выходной</li>
-          </ul>
+        <div className="footer-hours">
+          <h4>Идеи для образов</h4>
+          <div className="hours-list">
+            <span>Футболка + джинсы</span><span>Школа / кэжуал</span>
+            <span>Футболка + пиджак</span><span>Прогулка</span>
+            <span>Худи + джоггеры</span><span>Спортивный стиль</span>
+            <span>Водолазка + джинсы</span><span>Интеллектуал</span>
+          </div>
         </div>
         <div className="footer-bottom">
-          <span>2025 VINYL DINER</span>
-          <span>ВКУС КЛАССИКИ</span>
-          <span>IG / TW / TK</span>
+          <span>© 2024 Стильный код</span>
+          <span>Будь собой — это всегда в тренде</span>
         </div>
       </footer>
     </>
