@@ -26,6 +26,7 @@ export default function Index() {
       tagColor: "var(--accent)",
       tagTextColor: "var(--dark)",
       emoji: "🧥",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/2338109e-2277-4b6f-9af6-2e93e69665f0.png",
       name: "Однотонная толстовка",
       desc: "Тепло + стиль. Надевай поверх футболки или под куртку — всегда выглядит аккуратно.",
     },
