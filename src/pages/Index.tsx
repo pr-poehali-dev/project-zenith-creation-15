@@ -6,6 +6,7 @@ export default function Index() {
       tagColor: "var(--primary)",
       tagTextColor: "white",
       emoji: "👕",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/cd8d5fb2-8e7d-4872-b9d9-8197a26b591e.png",
       name: "Белая / серая футболка",
       desc: "Универсальная основа любого образа. Подходит к джинсам, брюкам и под пиджак.",
     },
@@ -255,16 +256,20 @@ export default function Index() {
                 </span>
                 <div
                   style={{
-                    height: "180px",
+                    height: "220px",
                     background: "#f5f5f5",
+                    borderBottom: "var(--border)",
+                    overflow: "hidden",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "72px",
-                    borderBottom: "var(--border)",
                   }}
                 >
-                  {item.emoji}
+                  {"photo" in item && item.photo ? (
+                    <img src={item.photo as string} alt={item.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : (
+                    <span style={{ fontSize: "72px" }}>{item.emoji}</span>
+                  )}
                 </div>
                 <div className="menu-card-body">
                   <h3 style={{ marginBottom: "10px" }}>{item.name}</h3>
