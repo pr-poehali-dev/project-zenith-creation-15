@@ -112,7 +112,7 @@ export default function Index() {
           <div
             className="hero-img"
             style={{
-              backgroundImage: `url(https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/967ebbc0-2ee2-49db-b9b2-cad6eaa147ce.png)`,
+              backgroundImage: `url(https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/4ade0cc6-5867-407c-9b08-bab0a7b76c5d.png)`,
             }}
           >
             <div className="sticker">
