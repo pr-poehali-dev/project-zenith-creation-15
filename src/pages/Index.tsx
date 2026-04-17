@@ -56,6 +56,7 @@ export default function Index() {
       tagColor: "var(--accent)",
       tagTextColor: "var(--dark)",
       emoji: "🧣",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/989a18b6-c0fd-45ea-8dec-7f79bec02ef4.png",
       name: "Лонгслив / водолазка",
       desc: "Отличная замена футболке в холод. Можно носить отдельно или под пиджак.",
     },
