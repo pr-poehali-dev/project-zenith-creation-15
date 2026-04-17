@@ -46,6 +46,7 @@ export default function Index() {
       tagColor: "var(--secondary)",
       tagTextColor: "white",
       emoji: "👟",
+      photo: "https://cdn.poehali.dev/projects/df875963-567a-47fa-ace1-c65077dce96a/bucket/5b54a2ba-df7f-4eeb-844e-c3ae2dc363f4.png",
       name: "Белые кроссовки",
       desc: "Самая нейтральная обувь. Идёт буквально ко всему: джинсы, брюки, платье.",
     },
